@@ -29,7 +29,11 @@ body {
             scroll-margin-top: 100px;
 
             &:nth-of-type(1) {
-                background-color: rgb(30, 30, 30);
+                // background-color: red;
+                background-image: url("bgImage.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                
                 color: aliceblue;
             }
             &:nth-of-type(2) {
