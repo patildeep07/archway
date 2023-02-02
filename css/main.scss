@@ -2,10 +2,25 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    
 
-    
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
 
+    ::-webkit-scrollbar-track{
+        // background-color: #f4f4f4;
+        background: #040c0f;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        // background: rgb(26, 26, 26);
+        background: cyan;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(104, 251, 251);
+    }
+    
     .container {
         width: 100%;
         height: 100%;
@@ -16,7 +31,73 @@ body {
         background-color: rgb(20, 20, 20);
 
         header {
-            height: 100px;
+            --text: #f4f4f4;
+            --text-inverse: #333;
+            --background: transparent;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px 0px 20px;
+            transition: background 250ms ease-in;
+
+            height:100px;
+            // width: 100%;
+            border-bottom: 3px whitesmoke;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-style: solid;
+
+            color: var(--text);
+
+            h2{
+                font-size: 2em;
+                // color: var(--text);
+            }
+
+            // &:hover{
+            //     background: var(--text);
+            //     color: black;
+            // }
+
+            
+        }
+
+        .onScroll {
+            --text: #f4f4f4;
+            --text-inverse: #333;
+            --background: #040c0f;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px 0px 20px;
+            background: var(--background);
+            transition: background 250ms ease-in;
+
+            height:100px;
+            // width: 100%;
+            border-bottom: 3px whitesmoke;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-style: solid;
+
+            color: var(--text);
+
+            h2{
+                font-size: 2em;
+                // color: var(--text);
+            }
         }
 
         section {
@@ -24,7 +105,8 @@ body {
             justify-content: center;
             align-items: center;
             width: 100vw ;
-            height: calc(100vh - 100px);
+            // width: calc (100vw - 10px);
+            // height: calc(100vh - 100px);
             scroll-snap-align: start;
             scroll-margin-top: 100px;
 
@@ -35,14 +117,17 @@ body {
                 background-size: cover;
                 
                 color: aliceblue;
+                height: 100vh;
             }
             &:nth-of-type(2) {
-                background-color: rgb(40, 40, 40);
+                background-color: #040c0f;
                 color: blue;
+                height: calc(100vh - 100px);
             }
             &:nth-of-type(3) {
-                background-color: rgb(50, 50, 50);
+                background-color: #040c0f;
                 color: green;
+                height: calc(100vh - 100px);
             }
 
             h1 {
@@ -51,5 +136,7 @@ body {
             }
 
         }
+
+        
     }
 }
