@@ -68,7 +68,7 @@ body .container header .active a {
 body .container header .mobile-nav-toggle {
   display: none;
 }
-@media (max-width: 35em) {
+@media (max-width: 500px) {
   body .container header .primary-nav {
     position: fixed;
     z-index: 100;
