@@ -69,6 +69,17 @@ body .container header .mobile-nav-toggle {
   display: none;
 }
 @media (max-width: 500px) {
+  body .container header {
+    /* hide scrollbar but allow scrolling */
+  }
+  body .container header element {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+  }
+  body .container header element::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
   body .container header .primary-nav {
     position: fixed;
     z-index: 100;
