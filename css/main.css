@@ -53,8 +53,14 @@ body .container header {
   border-style: solid;
   color: var(--text);
 }
+body .container header .logo {
+  background: url("logo.jpg");
+}
 body .container header h2 {
   font-size: 2em;
+}
+body .container header img {
+  height: 50px;
 }
 body .container header .primary-nav {
   display: flex;

@@ -65,10 +65,20 @@ body {
 
             color: var(--text);
 
+            .logo {
+                background: url("logo.jpg");
+            }
+
             h2{
                 font-size: 2em;
-                // color: var(--text);
+                // color: var(--text);      
             }
+
+            img {
+                height: 50px;
+            }
+
+            
 
             .primary-nav {
                 display: flex;
