@@ -18,10 +18,10 @@ body ::-webkit-scrollbar-track {
   background: #040c0f;
 }
 body ::-webkit-scrollbar-thumb {
-  background: cyan;
+  background: rgb(27, 42, 42);
 }
 body ::-webkit-scrollbar-thumb:hover {
-  background: rgb(104, 251, 251);
+  background: rgb(16, 36, 36);
 }
 body .container {
   width: 100%;
@@ -55,9 +55,6 @@ body .container header {
 }
 body .container header .logo {
   background: url("logo.jpg");
-}
-body .container header h2 {
-  font-size: 2em;
 }
 body .container header img {
   height: 50px;
@@ -96,9 +93,9 @@ body .container header .mobile-nav-toggle {
   }
   body .container header .primary-nav {
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     inset: 0 0 0 30%;
-    background: hsla(0deg, 0%, 0%, 0.5);
+    background: #1b1b1b;
     margin: 0;
     padding: 0;
     flex-direction: column;
@@ -113,7 +110,7 @@ body .container header .mobile-nav-toggle {
   body .container header .mobile-nav-toggle {
     display: block;
     position: absolute;
-    z-index: 999;
+    z-index: 9999;
     background: url("menu-icon.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -131,7 +128,7 @@ body .container header .mobile-nav-toggle {
   }
   @supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
     body .container header .primary-nav {
-      background: hsla(0deg, 0%, 100%, 0.1);
+      background: hsla(0deg, 0%, 70%, 0.1);
       -webkit-backdrop-filter: blur(1rem);
               backdrop-filter: blur(1rem);
     }
@@ -141,6 +138,7 @@ body .container .onScroll {
   --text: #f4f4f4;
   --text-inverse: #333;
   --background: #040c0f;
+  z-index: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -159,11 +157,9 @@ body .container .onScroll {
   border-style: solid;
   color: var(--text);
 }
-body .container .onScroll h2 {
-  font-size: 2em;
-}
 body .container section {
   padding: 0;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,7 +192,16 @@ body .container section h1 {
   color: #60fcf1;
 }
 body .container section h2 {
+  font-family: "Times New Roman", Times, serif;
   opacity: 0.7;
+  z-index: 0;
+}
+@media (max-width: 500px) {
+  body .container section h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 4em;
+    color: #60fcf1;
+  }
 }
 body .container section .title-tag {
   display: flex;

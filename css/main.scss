@@ -21,11 +21,11 @@ body {
 
     ::-webkit-scrollbar-thumb {
         // background: rgb(26, 26, 26);
-        background: cyan;
+        background: rgb(27, 42, 42);
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: rgb(104, 251, 251);
+        background: rgb(16, 36, 36);
     }
     
     .container {
@@ -69,10 +69,6 @@ body {
                 background: url("logo.jpg");
             }
 
-            h2{
-                font-size: 2em;
-                // color: var(--text);      
-            }
 
             img {
                 height: 50px;
@@ -124,11 +120,12 @@ body {
 
                 .primary-nav {
                     position: fixed;
-                    z-index: 100;
+                    z-index: 1000;
                     inset: 0 0 0 30%;
 
-                    background: hsl(0 0% 0% /0.5);
+                    // background: hsl(0 0% 0% /0.5);
                     
+                    background: #1b1b1b;
 
                     margin: 0;
                     padding: 0;
@@ -148,7 +145,7 @@ body {
                 .mobile-nav-toggle {
                     display: block;
                     position: absolute;
-                    z-index: 999;
+                    z-index: 9999;
                     background: url("menu-icon.png");
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -171,8 +168,10 @@ body {
 
                 @supports (backdrop-filter: blur(1rem)) {
                     .primary-nav {
-                        background: hsl(0 0% 100% /0.1);
+                        background: hsl(0 0% 70% /0.1);
+                        // background-color: #333;
                         backdrop-filter: blur(1rem);
+                        
                     }
                 }
             }
@@ -185,6 +184,8 @@ body {
             --text: #f4f4f4;
             --text-inverse: #333;
             --background: #040c0f;
+
+            z-index: 0;
 
             position: fixed;
             top: 0;
@@ -207,15 +208,14 @@ body {
 
             color: var(--text);
 
-            h2{
-                font-size: 2em;
-                // color: var(--text);
-            }
+            
         }
 
         section {
 
             padding: 0;
+
+            z-index: 0;
 
             display: flex;
             flex-direction: column;
@@ -254,7 +254,17 @@ body {
             }
 
             h2 {
+                font-family: 'Times New Roman', Times, serif;
                 opacity: 0.7;
+                z-index: 0;
+            }
+
+            @media (max-width: 500px) {
+                h1 {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: 4em;
+                    color: #60fcf1;
+                }
             }
 
             // Landing Page css
