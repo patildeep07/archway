@@ -1,129 +1,139 @@
-/* Reset to none */
-
-*{
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(20, 20, 20);
+  color: #f4f4f4;
+  overflow-x: hidden;
+}
+body .container ::-webkit-scrollbar {
+  width: 10px;
+}
+body .container ::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+body .container ::-webkit-scrollbar-thumb {
+  background: rgb(27, 42, 42);
+}
+body .container ::-webkit-scrollbar-thumb:hover {
+  background: rgb(16, 36, 36);
+}
+body header {
+  --text: #f4f4f4;
+  --text-inverse: #333;
+  --background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  transition: background 250ms ease-in;
+  height: 100px;
+  border-bottom: 3px whitesmoke;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  color: var(--text);
+}
+body header .logo {
+  background: url("images/logo.jpg");
+}
+body header img {
+  height: 50px;
+}
+body header .primary-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 0px 15px;
+}
+body header ul {
+  list-style-type: none;
+}
+body header a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1.5em;
+}
+body header .active a {
+  font-weight: 700;
+  color: cyan;
+}
+body header .mobile-nav-toggle {
+  display: none;
+}
+@media (max-width: 500px) {
+  body header {
+    /* hide scrollbar but allow scrolling */
+  }
+  body header .primary-nav {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    background: #1b1b1b;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-body{
-    font-family: 'Ubuntu', sans-serif;
-    
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar {
-    width: 10px;
+    flex-direction: column;
+    gap: 1rem;
+    padding: min(20vh, 10rem) 2em;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
   }
-  
-/* Track */
-::-webkit-scrollbar-track {
-background: #f1f1f1; 
+  body header .primary-nav[data-visible=true] {
+    transform: translateX(0%);
+  }
+  body header .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url("images/menu-icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    width: 1.1rem;
+    aspect-ratio: 1;
+    top: 2.2rem;
+    right: 3rem;
+  }
+  body header .mobile-nav-toggle[aria-expanded=true] {
+    background: url("images/close-icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+  }
+  @supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
+    body header .primary-nav {
+      background: hsla(0deg, 0%, 70%, 0.1);
+      -webkit-backdrop-filter: blur(1rem);
+              backdrop-filter: blur(1rem);
+    }
+  }
 }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-background: rgb(65, 65, 65); 
+body .onScroll {
+  --text: #f4f4f4;
+  --text-inverse: #333;
+  --background: #040c0f;
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  background: var(--background);
+  transition: background 250ms ease-in;
+  height: 100px;
+  border-bottom: 3px whitesmoke;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  color: var(--text);
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-background: #555; 
-}
-
-
-/* Header Css starts here */
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #272727;
-}
-
-.sticky + .content {
-    padding-top: 102px;
-}
-
-
-.header{
-    padding: 10px 0px 10px 0px;
-    background-color: #272727;
-    color: aliceblue;
-    width: 100%;
-    overflow: hidden;
-    vertical-align: middle;
-}
-
-.header h1{
-    float: left;
-    padding-left: 30px;
-}
-
-.header img{
-    float: left;
-    padding-left: 30px;
-}
-
-.header-links{
-    float: right;
-    padding-right: 20px;
-    vertical-align: middle;
-}
-
-
-.header-links a{
-    color: aliceblue;
-    float: left;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    font-weight: 500;
-
-}
-
-.header-links a:hover{
-    color: rgb(228, 128, 12);
-    float: left;
-    text-decoration:underline;
-    /* font-size: 25px; */
-    padding: 10px 20px 10px 20px;
-    transition: all 0.5s ease;
-    font-weight: 700;
-}
-
-/* Body css starts here */
-
-
-
-.content {
-    margin: 30px 20% 30px 20%;
-}
-
-.content h1 {
-    padding: 20px 0 20px 0;
-    font-weight: 700;
-}
-
-.content img {
-    padding: 20px 0 20px 0;
-    max-width: 80%;
-}
-
-.content p {
-    padding: 20px 0 20px 0;
-    text-align: justify;
-    font-size: 20px;
-    font-weight: 400;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
-/* User card */
-
-
-
-
-
-/* Footer css starts here */
+body .blank-space {
+  height: 100px;
+}/*# sourceMappingURL=blog1.css.map */
