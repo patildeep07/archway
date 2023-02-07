@@ -1,5 +1,3 @@
-
-
 // Mobile Menu
 
 const primaryNav = document.querySelector(".primary-nav");
