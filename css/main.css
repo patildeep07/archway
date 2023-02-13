@@ -55,10 +55,11 @@ body .container header {
   color: var(--text);
 }
 body .container header .logo {
-  background: url("logo.jpg");
+  background: url("logoBg.png");
 }
 body .container header img {
   height: 50px;
+  background: transparent;
 }
 body .container header .primary-nav {
   z-index: 1000;

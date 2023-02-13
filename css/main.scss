@@ -72,12 +72,13 @@ body {
             color: var(--text);
 
             .logo {
-                background: url("logo.jpg");
+                background: url("logoBg.png");
             }
 
 
             img {
                 height: 50px;
+                background: transparent;
             }
 
             
