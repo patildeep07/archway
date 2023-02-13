@@ -4,6 +4,10 @@ body {
     margin: 0;
     padding: 0;
 
+    
+
+    @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
     :-webkit-any(article, aside, nav, section) h1 {
         font-size: 1.5em;
         margin-block-start: 0em;
@@ -42,6 +46,8 @@ body {
             --text-inverse: #333;
             --background: transparent;
 
+            z-index: 999;
+
             position: fixed;
             top: 0;
             left: 0;
@@ -77,9 +83,10 @@ body {
             
 
             .primary-nav {
+                z-index: 1000;
                 display: flex;
                 flex-direction: row;
-                gap: 0px 15px;
+                gap: 0px 40px;
             }
 
             // Removes the bullets
@@ -96,7 +103,7 @@ body {
             
             .active a{
                 font-weight: 700;
-                color: cyan;
+                color: #00ffff;
             }
 
             // Responsive Header
@@ -168,6 +175,7 @@ body {
 
                 @supports (backdrop-filter: blur(1rem)) {
                     .primary-nav {
+                        z-index: 1000;
                         background: hsl(0 0% 70% /0.1);
                         // background-color: #333;
                         backdrop-filter: blur(1rem);
@@ -185,7 +193,7 @@ body {
             --text-inverse: #333;
             --background: #040c0f;
 
-            z-index: 0;
+            z-index: 1000;
 
             position: fixed;
             top: 0;
@@ -222,7 +230,7 @@ body {
             justify-content: center;
             align-items: center;
             width: 100vw ;
-            gap: 5em 15px;
+            gap: 1em 15px;
 
             scroll-snap-align: start;
             scroll-margin-top: 100px;
@@ -248,32 +256,68 @@ body {
             }
 
             h1 {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 5em;
+                font-family: 'Philosopher', sans-serif;
+                font-weight: 700;            
+                font-size: 14em;
                 color: #60fcf1;
             }
 
-            h2 {
-                font-family: 'Times New Roman', Times, serif;
-                opacity: 0.7;
+            h3 {
+                font-family: 'Philosopher', sans-serif;
+                font-weight: 500; 
+                opacity: 0.9;
                 z-index: 0;
+                font-size: 2em;
             }
 
-            @media (max-width: 500px) {
-                h1 {
-                    font-family: Georgia, 'Times New Roman', Times, serif;
-                    font-size: 4em;
-                    color: #60fcf1;
-                }
-            }
+
+
+            
 
             // Landing Page css
 
             .title-tag {
+                z-index: 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                h3 {
+                    opacity: 0.9;
+                    font-size: 2em;
+                    max-width: 80%;
+                    text-align: center;
+                }
+
+                @media (max-width: 500px) {
+                    h3 {
+                        font-family: 'Philosopher', sans-serif;
+                        font-weight: 500; 
+                        opacity: 0.9;
+                        font-size: 1.5em;
+                        max-width: 80%;
+                        text-align: center;
+                    }
+                }
+            }
+
+            @media (max-width: 500px) {
+                h1 {
+                    font-family: 'Philosopher', sans-serif;
+                    font-size: 4em;
+                    color: #60fcf1;
+                }
+
+                h3 {
+                    font-family: 'Philosopher', sans-serif;
+                    font-weight: 500; 
+                    opacity: 0.9;
+                    font-size: 1.5em;
+                    max-width: 80%;
+                    text-align: center;
+                }
+            
             }
 
             
