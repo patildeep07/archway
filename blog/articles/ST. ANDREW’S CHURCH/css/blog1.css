@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400&display=swap");
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
   color: #f4f4f4;
-  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 }
 body :-webkit-any(article, aside, nav, section) h1 {
   font-size: 1.5em;
@@ -25,9 +25,11 @@ body ::-webkit-scrollbar-thumb {
 body ::-webkit-scrollbar-thumb:hover {
   background: rgb(16, 36, 36);
 }
-body p {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
+@media screen and (max-width: 768px) {
+  body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+  }
 }
 body .container {
   width: 100%;
@@ -86,17 +88,6 @@ body .container header .mobile-nav-toggle {
   display: none;
 }
 @media (max-width: 500px) {
-  body .container header {
-    /* hide scrollbar but allow scrolling */
-  }
-  body .container header element {
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;
-  }
-  body .container header element::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
-  }
   body .container header .primary-nav {
     position: fixed;
     z-index: 1000;
