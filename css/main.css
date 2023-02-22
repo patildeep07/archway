@@ -24,6 +24,12 @@ body ::-webkit-scrollbar-thumb {
 body ::-webkit-scrollbar-thumb:hover {
   background: rgb(16, 36, 36);
 }
+@media screen and (max-width: 768px) {
+  body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+  }
+}
 body .container {
   width: 100%;
   height: 100%;
@@ -204,7 +210,7 @@ body .container section h3 {
   opacity: 0.9;
   z-index: 0;
   font-size: 1.3em;
-  max-width: 60%;
+  max-width: 50%;
 }
 body .container section .title-tag {
   z-index: 0;

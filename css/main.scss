@@ -37,6 +37,13 @@ body {
     ::-webkit-scrollbar-thumb:hover {
         background: rgb(16, 36, 36);
     }
+
+    @media screen and (max-width: 768px){
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 0px;
+        }
+      }
     
     .container {
         width: 100%;
@@ -284,7 +291,7 @@ body {
                 opacity: 0.9;
                 z-index: 0;
                 font-size: 1.3em;
-                max-width: 60%;
+                max-width: 50%;
             }
 
 
