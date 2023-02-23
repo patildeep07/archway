@@ -156,7 +156,7 @@ body .container .onScroll {
   color: var(--text);
 }
 body .container .blank-container {
-  height: 100px;
+  height: 125px;
 }
 body .container .flex-row-container {
   width: 100%;
@@ -209,11 +209,13 @@ body .container .blog-card p {
   overflow: hidden;
 }
 @media (min-width: 750px) {
+  body .container .blank-container {
+    height: 150px;
+  }
   body .container .flex-row-container {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 20px 0 20px 0;
   }
   body .container .blog-card {
     max-width: 300px;

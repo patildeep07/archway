@@ -227,7 +227,7 @@ body {
         }
 
         .blank-container {
-            height: 100px;
+            height: 125px;
         }
 
         // Body starts here
@@ -297,11 +297,16 @@ body {
         // Media Query for body
 
         @media (min-width: 750px){
+
+            .blank-container {
+                height: 150px;
+            }
+
             .flex-row-container {
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                margin: 20px 0 20px 0;
+                // margin: 10px 0 0px 0;
             }
 
             .blog-card {
