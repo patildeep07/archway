@@ -1,17 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #f4f4f4;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
-    color: #f4f4f4;
 
-    // @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
-
-    // @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-
-    @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
-
-    
 
     :-webkit-any(article, aside, nav, section) h1 {
         font-size: 1.5em;
@@ -20,7 +21,7 @@ body {
     }
 
     ::-webkit-scrollbar {
-        width: 5px;
+        width: 10px;
     }
 
     ::-webkit-scrollbar-track{
@@ -37,12 +38,12 @@ body {
         background: rgb(16, 36, 36);
     }
 
-
-
-    p {
-        font-family: 'Ubuntu', sans-serif;  
-        font-weight: 500;
-    }
+    @media screen and (max-width: 768px){
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 0px;
+        }
+      }
     
     .container {
         width: 100%;
@@ -57,6 +58,8 @@ body {
             --text: #f4f4f4;
             --text-inverse: #333;
             --background: transparent;
+
+            z-index: 999;
 
             position: fixed;
             top: 0;
@@ -82,17 +85,19 @@ body {
             color: var(--text);
 
             .logo {
-                background: url("images/logo.jpg");
+                background: url("logoBg.png");
             }
 
 
             img {
                 height: 50px;
+                background: transparent;
             }
 
             
 
             .primary-nav {
+                z-index: 1000;
                 display: flex;
                 flex-direction: row;
                 gap: 0px 40px;
@@ -104,6 +109,7 @@ body {
             }
 
             a {
+                font-family: 'Roboto Condensed', sans-serif;
                 text-decoration: none;
                 color: #f4f4f4;
                 font-size: 1.5em;
@@ -112,7 +118,7 @@ body {
             
             .active a{
                 font-weight: 700;
-                color: cyan;
+                color: #00ffff;
             }
 
             // Responsive Header
@@ -121,18 +127,9 @@ body {
                 display: none;
             }
 
-            @media (max-width: 500px) {
+            @media (max-width: 750px) {
 
-                /* hide scrollbar but allow scrolling */
-                element {
-                    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-                    scrollbar-width: none; /* for Firefox */
-                    overflow-y: scroll; 
-                }
-
-                element::-webkit-scrollbar {
-                    display: none; /* for Chrome, Safari, and Opera */
-                }
+            
 
                 .primary-nav {
                     position: fixed;
@@ -162,7 +159,7 @@ body {
                     display: block;
                     position: absolute;
                     z-index: 9999;
-                    background: url("images/menu-icon.png");
+                    background: url("../images/menu-icon.png");
                     background-repeat: no-repeat;
                     background-size: cover;
                     border: none;
@@ -173,7 +170,7 @@ body {
                 }
 
                 .mobile-nav-toggle[aria-expanded="true"] {
-                    background: url("images/close-icon.png");
+                    background: url("../images/close-icon.png");
                     background-repeat: no-repeat;
                     background-size: cover;
                     border: none;
@@ -184,6 +181,7 @@ body {
 
                 @supports (backdrop-filter: blur(1rem)) {
                     .primary-nav {
+                        z-index: 1000;
                         background: hsl(0 0% 70% /0.1);
                         // background-color: #333;
                         backdrop-filter: blur(1rem);
@@ -201,7 +199,7 @@ body {
             --text-inverse: #333;
             --background: #040c0f;
 
-            z-index: 0;
+            z-index: 1000;
 
             position: fixed;
             top: 0;
@@ -227,61 +225,74 @@ body {
             
         }
 
-        .blank-space {
+        .blank-container {
             height: 100px;
         }
 
-        // Body Section starts here
+        // Body starts here
 
-        .content {
+        .flex-row-container {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            
-            h1 {
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 700;
-                margin: 40px 0 20px 0;
-                max-width: 80%;
-                text-align: center;
+
+            a {
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        
+
+        .blog-card {
+            height: 400px;
+            width: 90%;
+            background-color: #1f1f1f;
+            margin: 20px 0 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .content-wrapper {
+                margin: 10px 0 10px 0;
             }
 
             img {
-                max-width: 80%;
-                max-height: 80vh;
-                margin: 20px 0 20px 0;
+                width: 90%;
+                max-height: 175px;
+                background-color: #f4f4f4;
+                margin: 10px;
             }
 
-            
+            h1 {
+                text-align:left;
+                font-family: 'Albert Sans', sans-serif;
+                font-weight: 700;
+                font-size: 1.4em;
+                color: #60fcf1;
+                width: 90%;
+                max-block-size: 1.4em;
+                margin: 10px;
+                overflow: hidden;
+            }
 
             p {
-                padding: 0 10% 0 10%;
                 text-align: justify;
-                font-size: 20px;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 300;
-
-                .red {
-                    color: red;
-                }
-            }
-
-            label {
-                color: #ffffffc7;
-            }
-
-            @media (max-width: 500px) {
-                h1 {
-                    font-size: 25px;
-                }
-
-                p {
-                    font-size: 20px;
-                }
+                width: 90%;
+                margin: 10px;
+                opacity: 0.9;
+                font-size: 1.2em;
+                max-block-size: 4.6em;
+                overflow: hidden;
             }
         }
         
+
+        
+
         
     }
 }
