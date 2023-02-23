@@ -21,22 +21,23 @@ body {
     }
 
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 0px;
+        -webkit-appearance: none;
     }
 
-    ::-webkit-scrollbar-track{
-        background-color: #f4f4f4;
-        // background: transparent;
-    }
+    // ::-webkit-scrollbar-track{
+    //     background-color: #f4f4f4;
+    //     // background: transparent;
+    // }
 
-    ::-webkit-scrollbar-thumb {
-        // background: rgb(26, 26, 26);
-        background: rgb(27, 42, 42);
-    }
+    // ::-webkit-scrollbar-thumb {
+    //     // background: rgb(26, 26, 26);
+    //     background: rgb(27, 42, 42);
+    // }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgb(16, 36, 36);
-    }
+    // ::-webkit-scrollbar-thumb:hover {
+    //     background: rgb(16, 36, 36);
+    // }
 
     @media screen and (max-width: 768px){
         ::-webkit-scrollbar {
@@ -274,7 +275,7 @@ body {
                 font-size: 1.4em;
                 color: #60fcf1;
                 width: 90%;
-                max-block-size: 1.4em;
+                max-block-size: 2.4em;
                 margin: 10px;
                 overflow: hidden;
             }
@@ -284,7 +285,7 @@ body {
                 width: 90%;
                 margin: 10px;
                 opacity: 0.9;
-                font-size: 1.2em;
+                font-size: 1em;
                 max-block-size: 4.6em;
                 overflow: hidden;
             }
@@ -293,6 +294,30 @@ body {
 
         
 
-        
+        // Media Query for body
+
+        @media (min-width: 750px){
+            .flex-row-container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0 20px 0;
+            }
+
+            .blog-card {
+                max-width: 300px;
+                align-items: center;
+                justify-content: center;
+
+                h1 {
+                    font-size: 1.2em;
+                    max-block-size: 2.6em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
     }
 }
