@@ -184,7 +184,7 @@ body .container .blog-card .content-wrapper {
 }
 body .container .blog-card img {
   width: 90%;
-  max-height: 175px;
+  height: 175px;
   background-color: #f4f4f4;
   margin: 10px;
 }
