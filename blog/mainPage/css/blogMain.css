@@ -114,7 +114,7 @@ body .container header .mobile-nav-toggle {
     border: none;
     width: 1.1rem;
     aspect-ratio: 1;
-    top: 2.2rem;
+    top: 1.6rem;
     right: 3rem;
   }
   body .container header .mobile-nav-toggle[aria-expanded=true] {
@@ -147,7 +147,7 @@ body .container .onScroll {
   padding: 0px 20px 0px 20px;
   background: var(--background);
   transition: background 250ms ease-in;
-  height: 100px;
+  height: 80px;
   border-bottom: 3px whitesmoke;
   border-top: 0px;
   border-left: 0px;
@@ -156,7 +156,7 @@ body .container .onScroll {
   color: var(--text);
 }
 body .container .blank-container {
-  height: 125px;
+  height: 100px;
 }
 body .container .flex-row-container {
   width: 100%;
