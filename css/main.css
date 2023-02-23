@@ -50,9 +50,8 @@ body .container header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px 0px 20px;
   transition: background 250ms ease-in;
-  height: 80px;
+  height: 60px;
   border-bottom: 3px whitesmoke;
   border-top: 0px;
   border-left: 0px;
@@ -116,8 +115,8 @@ body .container header .mobile-nav-toggle {
     border: none;
     width: 1.1rem;
     aspect-ratio: 1;
-    top: 1.6rem;
-    right: 3rem;
+    top: 1.2rem;
+    right: 1.5rem;
   }
   body .container header .mobile-nav-toggle[aria-expanded=true] {
     background: url("close-icon.png");
@@ -146,10 +145,10 @@ body .container .onScroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px 0px 0px;
   background: var(--background);
   transition: background 250ms ease-in;
-  height: 100px;
+  height: 60px;
   border-bottom: 3px whitesmoke;
   border-top: 0px;
   border-left: 0px;

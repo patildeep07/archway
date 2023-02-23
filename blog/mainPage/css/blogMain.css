@@ -113,8 +113,8 @@ body .container header .mobile-nav-toggle {
     border: none;
     width: 1.1rem;
     aspect-ratio: 1;
-    top: 1rem;
-    right: 1rem;
+    top: 1.2rem;
+    right: 1.5rem;
   }
   body .container header .mobile-nav-toggle[aria-expanded=true] {
     background: url("../images/close-icon.png");
@@ -155,7 +155,7 @@ body .container .onScroll {
   color: var(--text);
 }
 body .container .blank-container {
-  height: 100px;
+  height: 60px;
 }
 body .container .flex-row-container {
   width: 100%;
