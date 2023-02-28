@@ -245,7 +245,7 @@ body {
             display: grid;
             gap: 20px;
             grid-auto-flow: column;
-            grid-auto-columns: 36%;
+            grid-auto-columns: 56%;
 
             padding: 10px 20px 10px 20px;
             overflow-x: auto;
@@ -293,7 +293,9 @@ body {
                 height: 70px;
             }
 
-        
+            .media-scroller {
+                grid-auto-columns: 36%;
+            }
         }
     }
 }

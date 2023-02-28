@@ -167,7 +167,7 @@ body .container .media-scroller {
   display: grid;
   gap: 20px;
   grid-auto-flow: column;
-  grid-auto-columns: 36%;
+  grid-auto-columns: 56%;
   padding: 10px 20px 10px 20px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -200,5 +200,8 @@ body .container .media-element p {
 @media (min-width: 750px) {
   body .container .blank-container {
     height: 70px;
+  }
+  body .container .media-scroller {
+    grid-auto-columns: 36%;
   }
 }/*# sourceMappingURL=gallery.css.map */
