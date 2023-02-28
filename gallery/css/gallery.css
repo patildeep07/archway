@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: #f4f4f4;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
-  color: #f4f4f4;
 }
 body :-webkit-any(article, aside, nav, section) h1 {
   font-size: 1.5em;
@@ -15,17 +20,9 @@ body :-webkit-any(article, aside, nav, section) h1 {
 }
 body ::-webkit-scrollbar {
   width: 5px;
+  -webkit-appearance: none;
 }
-body ::-webkit-scrollbar-track {
-  background-color: #f4f4f4;
-}
-body ::-webkit-scrollbar-thumb {
-  background: rgb(27, 42, 42);
-}
-body ::-webkit-scrollbar-thumb:hover {
-  background: rgb(16, 36, 36);
-}
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   body ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 0px;
@@ -43,6 +40,7 @@ body .container header {
   --text: #f4f4f4;
   --text-inverse: #333;
   --background: transparent;
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
@@ -60,12 +58,14 @@ body .container header {
   color: var(--text);
 }
 body .container header .logo {
-  background: url("images/logo.jpg");
+  background: url("logoBg.png");
 }
 body .container header img {
   height: 50px;
+  background: transparent;
 }
 body .container header .primary-nav {
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   gap: 0px 40px;
@@ -74,14 +74,14 @@ body .container header ul {
   list-style-type: none;
 }
 body .container header a {
+  font-family: "Roboto Condensed", sans-serif;
   text-decoration: none;
   color: #f4f4f4;
   font-size: 1.5em;
-  font-family: "Roboto Condensed", sans-serif;
 }
 body .container header .active a {
   font-weight: 700;
-  color: cyan;
+  color: #00ffff;
 }
 body .container header .mobile-nav-toggle {
   display: none;
@@ -124,6 +124,7 @@ body .container header .mobile-nav-toggle {
   }
   @supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
     body .container header .primary-nav {
+      z-index: 1000;
       background: hsla(0, 0%, 70%, 0.1);
       -webkit-backdrop-filter: blur(1rem);
               backdrop-filter: blur(1rem);
@@ -134,7 +135,7 @@ body .container .onScroll {
   --text: #f4f4f4;
   --text-inverse: #333;
   --background: #040c0f;
-  z-index: 0;
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
@@ -153,42 +154,51 @@ body .container .onScroll {
   border-style: solid;
   color: var(--text);
 }
-body .container .blank-space {
+body .container .blank-container {
   height: 60px;
 }
-body .container .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+body .container .gallery-name {
+  margin: 10px 0 10px 0;
+  padding: 0 20px 0 20px;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 30px;
 }
-body .container .content h1 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  margin: 40px 0 20px 0;
-  max-width: 80%;
+body .container .media-scroller {
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: 36%;
+  padding: 10px 20px 10px 20px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+body .container .snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 20px;
+}
+body .container .snaps-inline * {
+  scroll-snap-align: start;
+}
+body .container .media-element {
+  padding: 10px;
+  background: #34363c;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: min-content;
+  box-shadow: 10px;
+  padding: 10px;
+}
+body .container .media-element img {
+  aspect-ratio: 4/3;
+  inline-size: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .container .media-element p {
   text-align: center;
 }
-body .container .content img {
-  max-width: 80%;
-  max-height: 80vh;
-  margin: 20px 0 20px 0;
-}
-body .container .content p {
-  padding: 0 10% 0 10%;
-  text-align: justify;
-  font-size: 20px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 300;
-}
-body .container .content label {
-  color: rgba(255, 255, 255, 0.7803921569);
-}
-@media (max-width: 750px) {
-  body .container .content h1 {
-    font-size: 25px;
+@media (min-width: 750px) {
+  body .container .blank-container {
+    height: 70px;
   }
-  body .container .content p {
-    font-size: 20px;
-  }
-}/*# sourceMappingURL=blog1.css.map */
+}/*# sourceMappingURL=gallery.css.map */
