@@ -162,9 +162,19 @@ body .container section:nth-of-type(2) {
   background-color: #040c0f;
   color: blue;
 }
+@media (min-width: 750px) {
+  body .container section:nth-of-type(2) {
+    height: 70vh;
+  }
+}
 body .container section:nth-of-type(3) {
   background-color: #040c0f;
   color: green;
+}
+@media (min-width: 750px) {
+  body .container section:nth-of-type(3) {
+    height: 70vh;
+  }
 }
 body .container section:nth-of-type(4) {
   background-color: #0e6281;
@@ -184,7 +194,7 @@ body .container section h3 {
   opacity: 0.9;
   z-index: 0;
   font-size: 1.3em;
-  max-width: 50%;
+  max-width: 80%;
 }
 body .container section .title-tag {
   z-index: 0;
@@ -224,7 +234,7 @@ body .container section .title-tag h3 {
     font-weight: 400;
     opacity: 0.9;
     font-size: 1.3em;
-    max-width: 60%;
+    max-width: 80%;
     text-align: center;
   }
 }

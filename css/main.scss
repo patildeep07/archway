@@ -255,7 +255,18 @@ body {
                 color: blue;
                 // height: calc(100vh - 60px);
                 // height: 100vh;
+
+                
+
             }
+
+            @media (min-width: 750px) {
+                &:nth-of-type(2){
+                    height: 70vh;
+                }
+            }
+
+
             &:nth-of-type(3) {
                 background-color: #040c0f;
                 color: green;
@@ -263,6 +274,14 @@ body {
                 // height: 50vh;
 
             }
+
+            @media (min-width: 750px) {
+                &:nth-of-type(3){
+                    height: 70vh;
+                }
+            }
+
+
             &:nth-of-type(4) {
                 background-color: #0e6281;
                 color: blue;
@@ -290,7 +309,7 @@ body {
                 opacity: 0.9;
                 z-index: 0;
                 font-size: 1.3em;
-                max-width: 50%;
+                max-width: 80%;
             }
 
 
@@ -345,7 +364,7 @@ body {
                     font-weight: 400; 
                     opacity: 0.9;
                     font-size: 1.3em;
-                    max-width: 60%;
+                    max-width: 80%;
                     text-align: center;
                 }
             
