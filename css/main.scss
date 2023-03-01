@@ -9,29 +9,29 @@ body {
 
     background-color: #040c0f;
 
-    :-webkit-any(article, aside, nav, section) h1 {
-        font-size: 1.5em;
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-    }
+    // :-webkit-any(article, aside, nav, section) h1 {
+    //     font-size: 1.5em;
+    //     margin-block-start: 0em;
+    //     margin-block-end: 0em;
+    // }
 
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 0px;
     }
 
-    ::-webkit-scrollbar-track{
-        background-color: #f4f4f4;
-        // background: transparent;
-    }
+    // ::-webkit-scrollbar-track{
+    //     background-color: #f4f4f4;
+    //     // background: transparent;
+    // }
 
-    ::-webkit-scrollbar-thumb {
-        // background: rgb(26, 26, 26);
-        background: rgb(27, 42, 42);
-    }
+    // ::-webkit-scrollbar-thumb {
+    //     // background: rgb(26, 26, 26);
+    //     background: rgb(27, 42, 42);
+    // }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgb(16, 36, 36);
-    }
+    // ::-webkit-scrollbar-thumb:hover {
+    //     background: rgb(16, 36, 36);
+    // }
 
     @media screen and (max-width: 768px){
         ::-webkit-scrollbar {
@@ -64,6 +64,7 @@ body {
             justify-content: space-between;
             align-items: center;
             // padding: 0px 20px 0px 20px;
+            padding: 0px 20px 0px 0px;
 
 
             transition: background 250ms ease-in;
@@ -235,10 +236,10 @@ body {
             justify-content: center;
             align-items: center;
             width: 100vw ;
-            gap: 4em 10px;
+            // gap: 4em 10px;
 
             scroll-snap-align: start;
-            scroll-margin-top: 100px;
+            scroll-margin-top: 60px;
 
             &:nth-of-type(1) {
                 // background-color: red;
@@ -252,12 +253,21 @@ body {
             &:nth-of-type(2) {
                 background-color: #040c0f;
                 color: blue;
-                height: calc(100vh - 100px);
+                height: calc(100vh - 60px);
+                // height: 100vh;
             }
             &:nth-of-type(3) {
                 background-color: #040c0f;
                 color: green;
-                height: calc(100vh - 100px);
+                height: calc(100vh - 60px);
+                // height: 50vh;
+
+            }
+            &:nth-of-type(4) {
+                background-color: #0e6281;
+                color: blue;
+                height: calc(100vh - 60px);
+                // height: 100vh;
             }
 
 
@@ -267,7 +277,7 @@ body {
             h1 {
                 font-family: 'Albert Sans', sans-serif;
                 font-weight: 700;            
-                font-size: 6em;
+                font-size: 4em;
                 color: #60fcf1;
                 margin-right: 10px;
             }
@@ -297,6 +307,7 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin: 10px 0 10px 0;
 
                 h3 {
                     font-family: 'Albert Sans', sans-serif;
@@ -304,7 +315,7 @@ body {
                     font-size: 2em;
                     max-width: 100%;
                     text-align: center;
-                    margin: 0px 0px
+                    margin: 0
                 }
 
                 @media (max-width: 750px) {
@@ -326,6 +337,7 @@ body {
                     font-size: 4em;
                     max-width: 95%;
                     color: #60fcf1;
+                    margin: 0;
                 }
 
                 h3 {
@@ -333,16 +345,177 @@ body {
                     font-weight: 400; 
                     opacity: 0.9;
                     font-size: 1.3em;
-                    max-width: 80%;
-                    text-align: justify;
+                    max-width: 60%;
+                    text-align: center;
                 }
             
             }
 
-            
-
             .scroll-img {
                 opacity: 0.2;
+            }
+
+
+            // Blogs section here 
+
+            .flex-row-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+    
+            
+    
+            .blog-card {
+                height: 350px;
+                width: 90%;
+                background-color: #171a23;
+                margin: 20px 0 20px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                .content-wrapper {
+                    margin: 10px 0 10px 0;
+                }
+    
+                img {
+                    width: 90%;
+                    height: 175px;
+                    background-color: #f4f4f4;
+                    margin: 10px;
+                }
+    
+                h1 {
+                    text-align:left;
+                    font-family: 'Albert Sans', sans-serif;
+                    font-weight: 700;
+                    font-size: 1.4em;
+                    color: #60fcf1;
+                    width: 90%;
+                    max-block-size: 2.4em;
+                    margin: 10px;
+                    overflow: hidden;
+                    text-align: center;
+                }
+    
+                
+            }
+            
+    
+            
+    
+            // Media Query for blog
+    
+            @media (min-width: 750px){
+    
+                .blank-container {
+                    height: 150px;
+                }
+    
+                .flex-row-container {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    // margin: 10px 0 0px 0;
+                }
+    
+                .blog-card {
+                    max-width: 300px;
+                    align-items: center;
+                    justify-content: center;
+    
+                    h1 {
+                        font-size: 1.2em;
+                        max-block-size: 2.6em;
+                    }
+    
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+
+
+
+
+
+
+
+            // Gallery section here
+
+            .gallery-name {
+                margin: 10px 0 30px 0;
+                // padding: 0 20px 0 20px;
+                font-family: 'Albert Sans', sans-serif;
+                font-size: 30px;
+            }
+    
+    
+            .media-scroller {
+                display: grid;
+                gap: 20px;
+                grid-auto-flow: column;
+                grid-auto-columns: 56%;
+
+                margin: 0 30px 0 30px;
+    
+                padding: 10px 20px 10px 20px;
+                overflow-x: auto;
+                overscroll-behavior-inline: contain;
+            }
+    
+            .snaps-inline {
+                scroll-snap-type: inline mandatory ;
+                scroll-padding-inline: 20px;
+    
+                * {
+                    scroll-snap-align: start;
+                }
+            }
+    
+            
+            
+            .media-element {
+                padding: 10px;
+                background: #171a23;
+                display: grid;
+                // gap: 0px;
+                grid-template-rows: min-content;
+                box-shadow: 10px; 
+                padding: 10px;
+                
+                img {
+                    aspect-ratio: 4/3;
+                    inline-size: 100%;
+                    object-fit: cover;
+                }
+    
+                p {
+                    text-align: center;
+                    font-family: 'Albert Sans', sans-serif;
+                    color: #f4f4f4;
+                }
+            }
+            
+    
+    
+            // Media Query for body
+    
+            @media (min-width: 750px){
+    
+    
+                .media-scroller {
+                    grid-auto-columns: 36%;
+                }
             }
 
         }
