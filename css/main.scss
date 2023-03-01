@@ -236,7 +236,7 @@ body {
             justify-content: center;
             align-items: center;
             width: 100vw ;
-            // gap: 4em 10px;
+            gap: 4em 10px;
 
             // scroll-snap-align: start;
             // scroll-margin-top: 60px;
@@ -328,10 +328,15 @@ body {
                 align-items: center;
                 margin: 10px 0 10px 0;
 
+
+                h1{
+                    margin: 0;
+                 }
+
                 h3 {
                     font-family: 'Albert Sans', sans-serif;
                     opacity: 0.9;
-                    font-size: 2em;
+                    font-size: 1.3em;
                     max-width: 100%;
                     text-align: center;
                     margin: 0

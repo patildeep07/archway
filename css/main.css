@@ -150,6 +150,7 @@ body .container section {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  gap: 4em 10px;
 }
 body .container section:nth-of-type(1) {
   background-image: url("bgImage.jpg");
@@ -204,10 +205,13 @@ body .container section .title-tag {
   align-items: center;
   margin: 10px 0 10px 0;
 }
+body .container section .title-tag h1 {
+  margin: 0;
+}
 body .container section .title-tag h3 {
   font-family: "Albert Sans", sans-serif;
   opacity: 0.9;
-  font-size: 2em;
+  font-size: 1.3em;
   max-width: 100%;
   text-align: center;
   margin: 0;
