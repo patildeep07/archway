@@ -244,7 +244,7 @@ body .container section .flex-row-container a {
   align-items: center;
 }
 body .container section .blog-card {
-  height: 350px;
+  height: 300px;
   width: 90%;
   background-color: #171a23;
   margin: 20px 0 20px 0;
@@ -274,9 +274,6 @@ body .container section .blog-card h1 {
   text-align: center;
 }
 @media (min-width: 750px) {
-  body .container section .blank-container {
-    height: 150px;
-  }
   body .container section .flex-row-container {
     flex-direction: row;
     align-items: center;
@@ -306,7 +303,6 @@ body .container section .media-scroller {
   grid-auto-flow: column;
   grid-auto-columns: 56%;
   margin: 0 30px 0 30px;
-  padding: 10px 20px 10px 20px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
@@ -323,21 +319,30 @@ body .container section .media-element {
   display: grid;
   grid-template-rows: min-content;
   box-shadow: 10px;
-  padding: 10px;
 }
 body .container section .media-element img {
   aspect-ratio: 4/3;
   inline-size: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 250px;
 }
 body .container section .media-element p {
   text-align: center;
   font-family: "Albert Sans", sans-serif;
   color: #f4f4f4;
 }
-@media (min-width: 750px) {
+body .container section .media-scroller {
+  grid-auto-columns: 24%;
+}
+@media (max-width: 750px) {
   body .container section .media-scroller {
-    grid-auto-columns: 36%;
+    grid-auto-columns: 56%;
+  }
+  body .container section .media-element img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }/*# sourceMappingURL=main.css.map */
