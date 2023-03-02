@@ -23,6 +23,9 @@ body .container {
   overflow-x: hidden;
   background-color: rgb(20, 20, 20);
 }
+body .container .logo {
+  background: url("logoBg.png");
+}
 body .container header {
   --text: #f4f4f4;
   --text-inverse: #333;
@@ -44,9 +47,6 @@ body .container header {
   border-right: 0px;
   border-style: solid;
   color: var(--text);
-}
-body .container header .logo {
-  background: url("logoBg.png");
 }
 body .container header img {
   height: 50px;
@@ -165,16 +165,22 @@ body .container section:nth-of-type(1) {
 }
 body .container section:nth-of-type(2) {
   background-color: #040c0f;
-  color: blue;
+  padding: 40px 0;
 }
 body .container section:nth-of-type(3) {
   background-color: #040c0f;
   color: green;
+  padding: 40px 0;
 }
 body .container section:nth-of-type(4) {
-  background-color: #0e6281;
-  color: blue;
-  height: 50vh;
+  background-color: #040c0f;
+  height: 30vh;
+}
+@media (max-width: 750px) {
+  body .container section:nth-of-type(4) {
+    height: -moz-max-content;
+    height: max-content;
+  }
 }
 body .container section h1 {
   font-family: "Albert Sans", sans-serif;
@@ -389,7 +395,6 @@ body .container section .swiper-slide {
 body .container section .swiper-slide p {
   font-size: 20px;
   font-family: "Albert Sans", sans-serif;
-  font-family: "Albert Sans", sans-serif;
 }
 body .container section .mySwiper2 {
   height: 400px;
@@ -399,6 +404,7 @@ body .container section .mySwiper2 {
   body .container section .mySwiper2 {
     width: 100%;
     height: 50%;
+    margin: 10px 10px;
   }
 }
 body .container section .mySwiper {
@@ -420,4 +426,41 @@ body .container section .swiper-slide img {
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+body .container section .footer-flex-row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 150px;
+}
+body .container section .footer-flex-row-container .left-footer h2 {
+  color: #f4f4f4;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+}
+body .container section .footer-flex-row-container .left-footer h3 {
+  color: #60fcf1;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+}
+body .container section .footer-flex-row-container .middle-footer h2 {
+  color: #f4f4f4;
+  margin: 0;
+  font-size: 40px;
+  font-family: "Albert Sans", sans-serif;
+  text-align: center;
+}
+body .container section .footer-flex-row-container .right-footer .logo img {
+  height: 60px;
+}
+@media (max-width: 750px) {
+  body .container section .footer-flex-row-container {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
