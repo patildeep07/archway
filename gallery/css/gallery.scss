@@ -341,5 +341,75 @@ body {
 
         
         }
+
+
+        // Footer
+
+        .footer-flex-row-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 100px;
+
+            // background-color: #040c0f;
+            height: 20vh;
+
+            @media (max-width:750px) {
+                height: max-content;
+            }
+
+
+            .left-footer{
+                // width: 50%;
+
+                h2 {
+                    color: #f4f4f4;
+                    margin: 0;
+                    font-size: 20px;
+                    font-family: 'Albert Sans', sans-serif;
+                }
+
+                h3 {
+                    color: #60fcf1;
+                    margin: 0;
+                    font-size: 20px;
+                    font-family: 'Albert Sans', sans-serif;
+                }
+            }
+
+            .middle-footer {
+                h2 {
+                    color: #f4f4f4;
+                    margin: 0;
+                    font-size: 40px;
+                    font-family: 'Albert Sans', sans-serif;
+                    text-align: center;
+                }
+            }
+
+            .right-footer {
+
+                // width: 50%;
+
+                .logo img{
+                    height: 60px;
+                    
+                }
+            }
+
+
+            @media (max-width: 750px) {
+                flex-direction: column;
+                gap: 30px;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 20px;
+
+                .middle-footer h2{
+                    font-size: 25px;
+                }
+            }
+        }
     }
 }

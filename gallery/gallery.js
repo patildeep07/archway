@@ -17,7 +17,7 @@ navToggle.addEventListener('click', () => {
 
 
 
-// Initialize Swiper
+// Autoplay one
 const progressCircle = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
     var swiper = new Swiper(".mySwiper", {
@@ -42,3 +42,6 @@ const progressCircle = document.querySelector(".autoplay-progress svg");
         }
       }
     });
+
+
+    

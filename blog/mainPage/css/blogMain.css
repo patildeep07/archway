@@ -34,7 +34,7 @@ body .container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: rgb(20, 20, 20);
+  background: #040c0f;
 }
 body .container header {
   --text: #f4f4f4;
@@ -155,7 +155,7 @@ body .container .onScroll {
   color: var(--text);
 }
 body .container .blank-container {
-  height: 60px;
+  height: 20px;
 }
 body .container .flex-row-container {
   width: 100%;
@@ -172,7 +172,7 @@ body .container .flex-row-container a {
 body .container .blog-card {
   height: 400px;
   width: 90%;
-  background-color: #1f1f1f;
+  background-color: #171a23;
   margin: 20px 0 20px 0;
   display: flex;
   flex-direction: column;
@@ -188,7 +188,7 @@ body .container .blog-card img {
   margin: 10px;
 }
 body .container .blog-card h1 {
-  text-align: left;
+  text-align: center;
   font-family: "Albert Sans", sans-serif;
   font-weight: 700;
   font-size: 1.4em;
@@ -227,5 +227,53 @@ body .container .blog-card p {
   }
   body .container .blog-card p {
     font-size: 1em;
+  }
+}
+body .container .footer-flex-row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  height: 20vh;
+}
+@media (max-width: 750px) {
+  body .container .footer-flex-row-container {
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+body .container .footer-flex-row-container .left-footer h2 {
+  color: #f4f4f4;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+}
+body .container .footer-flex-row-container .left-footer h3 {
+  color: #60fcf1;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+}
+body .container .footer-flex-row-container .middle-footer h2 {
+  color: #f4f4f4;
+  margin: 0;
+  font-size: 40px;
+  font-family: "Albert Sans", sans-serif;
+  text-align: center;
+}
+body .container .footer-flex-row-container .right-footer .logo img {
+  height: 60px;
+}
+@media (max-width: 750px) {
+  body .container .footer-flex-row-container {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+  }
+  body .container .footer-flex-row-container .middle-footer h2 {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=blogMain.css.map */
