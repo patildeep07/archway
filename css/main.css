@@ -171,14 +171,10 @@ body .container section:nth-of-type(3) {
   background-color: #040c0f;
   color: green;
 }
-@media (min-width: 750px) {
-  body .container section:nth-of-type(3) {
-    height: 70vh;
-  }
-}
 body .container section:nth-of-type(4) {
   background-color: #0e6281;
   color: blue;
+  height: 50vh;
 }
 body .container section h1 {
   font-family: "Albert Sans", sans-serif;
@@ -350,53 +346,4 @@ body .container section .gallery-name {
   margin: 10px 0 30px 0;
   font-family: "Albert Sans", sans-serif;
   font-size: 30px;
-}
-body .container section .media-scroller {
-  display: grid;
-  gap: 20px;
-  grid-auto-flow: column;
-  grid-auto-columns: 56%;
-  margin: 0 30px 0 30px;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-}
-body .container section .snaps-inline {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 20px;
-}
-body .container section .snaps-inline * {
-  scroll-snap-align: start;
-}
-body .container section .media-element {
-  padding: 10px;
-  background: #171a23;
-  display: grid;
-  grid-template-rows: min-content;
-  box-shadow: 10px;
-}
-body .container section .media-element img {
-  aspect-ratio: 4/3;
-  inline-size: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 250px;
-}
-body .container section .media-element p {
-  text-align: center;
-  font-family: "Albert Sans", sans-serif;
-  color: #f4f4f4;
-}
-body .container section .media-scroller {
-  grid-auto-columns: 24%;
-}
-@media (max-width: 750px) {
-  body .container section .media-scroller {
-    grid-auto-columns: 56%;
-  }
-  body .container section .media-element img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }/*# sourceMappingURL=main.css.map */

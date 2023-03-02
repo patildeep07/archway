@@ -157,11 +157,80 @@ body .container .onScroll {
 body .container .blank-container {
   height: 60px;
 }
+body .container .swiper-slide img {
+  height: 200px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid rgb(53, 49, 62);
+}
+body .container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .container .swiper {
+  width: 50%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 750px) {
+  body .container .swiper {
+    width: 100%;
+    height: 40%;
+  }
+}
+body .container .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+body .container .mySwiper2 {
+  height: 50%;
+  width: 60%;
+}
+@media (max-width: 750px) {
+  body .container .mySwiper2 {
+    width: 100%;
+    height: 40%;
+  }
+}
+body .container .mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+body .container .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+body .container .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+body .container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 body .container .gallery-name {
   margin: 10px 0 10px 0;
   padding: 0 20px 0 20px;
   font-family: "Albert Sans", sans-serif;
   font-size: 30px;
+  text-align: center;
 }
 body .container .media-scroller {
   display: grid;
