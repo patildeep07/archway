@@ -157,87 +157,85 @@ body .container .onScroll {
 body .container .blank-container {
   height: 60px;
 }
-body .container .swiper-slide img {
-  height: 200px;
-  width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 2px solid rgb(53, 49, 62);
-}
-body .container .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body .container .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 40%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 4/3;
-}
-body .container .swiper {
-  width: 50%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (max-width: 750px) {
-  body .container .swiper {
-    width: 100%;
-    height: 40%;
-  }
-}
-body .container .swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-body .container .swiper-slide p {
-  font-size: 20px;
-  font-family: "Albert Sans", sans-serif;
-  font-family: "Albert Sans", sans-serif;
-}
-body .container .mySwiper2 {
-  height: 400px;
-  width: 60%;
-}
-@media (max-width: 750px) {
-  body .container .mySwiper2 {
-    width: 100%;
-    height: 50%;
-  }
-}
-body .container .mySwiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-body .container .mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
-  opacity: 0.4;
-}
-body .container .mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-body .container .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 body .container .gallery-name {
   margin: 10px 0 10px 0;
   padding: 0 20px 0 20px;
   font-family: "Albert Sans", sans-serif;
   font-size: 30px;
   text-align: center;
+}
+body .container .gallery {
+  height: 300px;
+  color: #040c0f;
+  margin: 20px 20%;
+}
+@media (max-width: 750px) {
+  body .container .gallery {
+    height: 250px;
+    margin: 20px 10px;
+  }
+}
+body .container .swiper {
+  width: 100%;
+  height: 100%;
+}
+body .container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .container .autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+body .container .autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+body .container .gallery1 .img1 {
+  background: red;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .container .gallery1 .img2 {
+  background: url(../images/ST\ Andrew\ Church.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .container .gallery2 .img1 {
+  background: violet;
 }
 @media (min-width: 750px) {
   body .container .blank-container {
