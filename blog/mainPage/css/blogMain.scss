@@ -228,18 +228,19 @@ body {
         }
 
         .blank-container {
-            height: 80px;
+            height: 60px;
         }
 
         // Body starts here
 
 
-        .flex-row-container2 {
+        .flex-row-container {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 10px 0 10px 0;
+            justify-content: center;
+            margin: 40px 0px;
 
             a {
                 text-decoration: none;
@@ -259,14 +260,16 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            border: 1px solid #f4f4f4;
+            border-radius: 20px;
+            box-shadow: 1px 1px 10px #fdfdfd;
 
             .dark-overlay {
                 height: 400px;
                 background: linear-gradient(transparent, black);
+                border-radius: 20px;
             }
         }
-
-        
 
         .card-content{
             height: 375px;
@@ -291,87 +294,17 @@ body {
         }
 
 
-
-
-        .flex-row-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-
-            a {
-                text-decoration: none;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        
-
-        .blog-card {
-            height: 400px;
-            width: 90%;
-            background-color: #171a23;
-            margin: 20px 0 20px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .content-wrapper {
-                margin: 10px 0 10px 0;
-            }
-
-            img {
-                width: 90%;
-                height: 175px;
-                background-color: #f4f4f4;
-                margin: 10px;
-            }
-
-            h1 {
-                text-align:center;
-                font-family: 'Albert Sans', sans-serif;
-                font-weight: 700;
-                font-size: 1.4em;
-                color: #60fcf1;
-                width: 90%;
-                max-block-size: 2.4em;
-                margin: 10px;
-                overflow: hidden;
-            }
-
-            p {
-                text-align: justify;
-                width: 90%;
-                margin: 10px;
-                opacity: 0.9;
-                font-size: 1em;
-                max-block-size: 4.6em;
-                overflow: hidden;
-            }
-        }
-        
-
-        
-
         // Media Query for body
 
         @media (min-width: 750px){
 
             .blank-container {
-                height: 100px;
+                height: 80px;
             }
+
+            
 
             .flex-row-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                // margin: 10px 0 0px 0;
-            }
-
-            .flex-row-container2 {
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
@@ -385,20 +318,7 @@ body {
                 justify-content: center;  
             }
 
-            .blog-card {
-                max-width: 300px;
-                align-items: center;
-                justify-content: center;
-
-                h1 {
-                    font-size: 1.2em;
-                    max-block-size: 2.6em;
-                }
-
-                p {
-                    font-size: 1em;
-                }
-            }
+            
 
         }
 

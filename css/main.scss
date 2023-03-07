@@ -437,12 +437,13 @@ body {
 
 
             .flex-row-container {
-
-                // display: none;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
+                margin: 40px 0px;
+                gap: 30px;
     
                 a {
                     text-decoration: none;
@@ -452,79 +453,64 @@ body {
                 }
             }
     
-            
-    
-            .blog-card {
-                height: 300px;
+            .img-card {
+                height: 400px;
                 width: 90%;
-                background-color: #171a23;
-                margin: 20px 0 20px 0;
+                background: black;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                border: 1px solid #f4f4f4;
+                border-radius: 20px;
+                box-shadow: 1px 1px 10px #fdfdfd;
     
-                .content-wrapper {
-                    margin: 10px 0 10px 0;
+                .dark-overlay {
+                    height: 400px;
+                    background: linear-gradient(transparent, black);
+                    border-radius: 20px;
                 }
+            }
+
+            .st-andrew-church {
+                background: url(../gallery/images/ST\ Andrew\ Church.webp);
+            }
     
-                img {
-                    width: 90%;
-                    height: 175px;
-                    background-color: #f4f4f4;
-                    margin: 10px;
+            .card-content{
+                height: 375px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end;
+                
+                h1, p {
+                    text-align: center;
+                    font-size: 1.3em;
+                    margin: 0 10px 0 10px;
                 }
     
                 h1 {
-                    text-align:left;
-                    font-family: 'Albert Sans', sans-serif;
-                    font-weight: 700;
-                    font-size: 1.4em;
-                    color: #60fcf1;
-                    width: 90%;
-                    max-block-size: 2.4em;
-                    margin: 10px;
-                    overflow: hidden;
-                    text-align: center;
+                    color: #f4f4f4;
                 }
     
-                
+                p {
+                    color: #f4f4f4bb;
+                }
             }
-            
     
-            
     
-            // Media Query for blog
+            // Media Query for body
     
             @media (min-width: 750px){
     
+  
                 .flex-row-container {
                     display: none;
-                }
-        
-                
-    
-                .flex-row-container {
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    // margin: 10px 0 0px 0;
-                }
-    
-                .blog-card {
                     
-                    max-width: 300px;
-                    align-items: center;
-                    justify-content: center;
-    
-                    h1 {
-                        font-size: 1.2em;
-                        max-block-size: 2.6em;
-                    }
-    
-                    p {
-                        font-size: 1em;
-                    }
                 }
+  
             }
 
 
@@ -535,7 +521,11 @@ body {
 
             // Gallery section here
 
-            
+            .black-bg {
+                background: #040c0f;
+            }
+
+
             .gallery-name {
                 // margin: 10px 0 30px 0;
                 // padding: 0 20px 0 20px;
