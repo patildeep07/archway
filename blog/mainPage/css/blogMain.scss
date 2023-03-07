@@ -239,6 +239,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 10px 0 10px 0;
 
             a {
                 text-decoration: none;
@@ -276,7 +277,7 @@ body {
             
             h1, p {
                 text-align: center;
-                font-size: 1.4em;
+                font-size: 1.3em;
                 margin: 0 10px 0 10px;
             }
 
@@ -374,11 +375,12 @@ body {
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
+                
                 // margin: 10px 0 0px 0;
             }
 
             .img-card {
-                max-width: 90%;
+                max-width: 85%;
                 align-items: center;
                 justify-content: center;  
             }

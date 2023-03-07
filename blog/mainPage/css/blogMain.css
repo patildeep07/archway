@@ -162,6 +162,7 @@ body .container .flex-row-container2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px 0 10px 0;
 }
 body .container .flex-row-container2 a {
   text-decoration: none;
@@ -193,7 +194,7 @@ body .container .card-content {
 }
 body .container .card-content h1, body .container .card-content p {
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   margin: 0 10px 0 10px;
 }
 body .container .card-content h1 {
@@ -267,7 +268,7 @@ body .container .blog-card p {
     justify-content: center;
   }
   body .container .img-card {
-    max-width: 90%;
+    max-width: 85%;
     align-items: center;
     justify-content: center;
   }
