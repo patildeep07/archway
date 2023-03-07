@@ -164,6 +164,7 @@ body .container .flex-row-container {
   align-items: center;
   justify-content: center;
   margin: 40px 0px;
+  gap: 30px;
 }
 body .container .flex-row-container a {
   text-decoration: none;
