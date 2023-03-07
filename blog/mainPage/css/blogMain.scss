@@ -228,10 +228,69 @@ body {
         }
 
         .blank-container {
-            height: 20px;
+            height: 80px;
         }
 
         // Body starts here
+
+
+        .flex-row-container2 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .img-card {
+            height: 400px;
+            width: 90%;
+            background: url(../images/ST\ Andrew\ Church.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .dark-overlay {
+                height: 400px;
+                background: linear-gradient(transparent, black);
+            }
+        }
+
+        
+
+        .card-content{
+            height: 375px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            
+            h1, p {
+                text-align: center;
+                font-size: 1.4em;
+                margin: 0 10px 0 10px;
+            }
+
+            h1 {
+                color: #f4f4f4;
+            }
+
+            p {
+                color: #f4f4f4bb;
+            }
+        }
+
+
+
 
         .flex-row-container {
             width: 100%;
@@ -301,7 +360,7 @@ body {
         @media (min-width: 750px){
 
             .blank-container {
-                height: 150px;
+                height: 100px;
             }
 
             .flex-row-container {
@@ -309,6 +368,19 @@ body {
                 align-items: center;
                 justify-content: center;
                 // margin: 10px 0 0px 0;
+            }
+
+            .flex-row-container2 {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                // margin: 10px 0 0px 0;
+            }
+
+            .img-card {
+                max-width: 90%;
+                align-items: center;
+                justify-content: center;  
             }
 
             .blog-card {

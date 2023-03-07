@@ -155,7 +155,52 @@ body .container .onScroll {
   color: var(--text);
 }
 body .container .blank-container {
-  height: 20px;
+  height: 80px;
+}
+body .container .flex-row-container2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .flex-row-container2 a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .img-card {
+  height: 400px;
+  width: 90%;
+  background: url(../images/ST\ Andrew\ Church.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .img-card .dark-overlay {
+  height: 400px;
+  background: linear-gradient(transparent, black);
+}
+body .container .card-content {
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+body .container .card-content h1, body .container .card-content p {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0 10px 0 10px;
+}
+body .container .card-content h1 {
+  color: #f4f4f4;
+}
+body .container .card-content p {
+  color: rgba(244, 244, 244, 0.7333333333);
 }
 body .container .flex-row-container {
   width: 100%;
@@ -209,10 +254,20 @@ body .container .blog-card p {
 }
 @media (min-width: 750px) {
   body .container .blank-container {
-    height: 150px;
+    height: 100px;
   }
   body .container .flex-row-container {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container .flex-row-container2 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container .img-card {
+    max-width: 90%;
     align-items: center;
     justify-content: center;
   }
