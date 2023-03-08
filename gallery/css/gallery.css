@@ -286,6 +286,11 @@ body .container .footer-flex-row-container .right-footer .logo img {
     align-items: center;
     margin: 10px 20px;
   }
+  body .container .footer-flex-row-container .left-footer h2, body .container .footer-flex-row-container h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
   body .container .footer-flex-row-container .middle-footer h2 {
     font-size: 25px;
   }

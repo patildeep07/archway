@@ -441,17 +441,22 @@ body .container section .footer-flex-row-container {
   justify-content: space-between;
   gap: 150px;
 }
+body .container section .footer-flex-row-container .left-footer {
+  text-align: center;
+}
 body .container section .footer-flex-row-container .left-footer h2 {
   color: #f4f4f4;
   margin: 0;
   font-size: 20px;
   font-family: "Albert Sans", sans-serif;
+  text-align: center;
 }
 body .container section .footer-flex-row-container .left-footer h3 {
   color: #60fcf1;
   margin: 0;
   font-size: 20px;
   font-family: "Albert Sans", sans-serif;
+  text-align: center;
 }
 body .container section .footer-flex-row-container .middle-footer h2 {
   color: #f4f4f4;
@@ -470,6 +475,12 @@ body .container section .footer-flex-row-container .right-footer .logo img {
     justify-content: center;
     align-items: center;
     margin: 10px 20px;
+    text-align: center;
+  }
+  body .container section .footer-flex-row-container .left-footer h2, body .container section .footer-flex-row-container h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
   body .container section .footer-flex-row-container .middle-footer h2 {
     font-size: 25px;

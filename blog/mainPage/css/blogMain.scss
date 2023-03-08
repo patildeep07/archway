@@ -388,6 +388,12 @@ body {
                 align-items: center;
                 margin: 10px 20px;
 
+                .left-footer h2, h3 {
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                }
+
                 .middle-footer h2{
                     font-size: 25px;
                 }
