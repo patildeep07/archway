@@ -251,6 +251,9 @@ body .container section .web-container {
   gap: 3em;
   margin: 20px 0 20px 0;
 }
+body .container section .web-container a {
+  text-decoration: none;
+}
 body .container section .web-container .card {
   background: red;
   border: 1px solid rgba(244, 244, 244, 0.4274509804);
@@ -266,12 +269,18 @@ body .container section .web-container .card .card-content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
+  padding: 0 10px;
   gap: 0;
 }
 body .container section .web-container .card .card-content .core-content {
+  text-align: left;
   color: #171a23;
   font-family: "Roboto Condensed", sans-serif;
+}
+body .container section .web-container .card .card-content .core-content p {
+  text-align: left;
+  color: #171a23;
+  margin: 0;
 }
 body .container section .web-container .st-andrew-church {
   background: url(../home-gallery/photo/ST\ Andrew\ Church.webp);

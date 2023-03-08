@@ -387,7 +387,9 @@ body {
                 gap: 3em;
                 margin: 20px 0 20px 0;
 
-                
+                a {
+                    text-decoration: none;
+                }
 
                 .card{
                     background: red;
@@ -407,14 +409,22 @@ body {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        padding-left: 10px;
+                        padding: 00 10px;
                         gap: 0;
+                        
 
                         .core-content {
-                            
+                            text-align: left;
                             color: #171a23;
                             // font-family: 'Albert Sans', sans-serif;
                             font-family: 'Roboto Condensed', sans-serif;
+
+                            p {
+                                text-align: left;
+                                color: #171a23;
+                                margin: 0;
+                                
+                            }
                         }
                     }
                 }
@@ -434,7 +444,7 @@ body {
             }
 
 
-
+            // Mobile view
 
             .flex-row-container {
                 width: 100%;
